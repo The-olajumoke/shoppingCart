@@ -19,7 +19,9 @@ export default function Home() {
     <Layout>
       <div className="pt-20 px-20 flex flex-col  font-poppins">
         <div className="flex vp-600:hidden items-center justify-between ">
-          <h2 className=" text-black-coal text-lg font-medium">Shopping Bag</h2>
+          <h2 className=" text-black-coal text-lg font-medium">
+            Shopping Cart
+          </h2>
           <button
             className=" cursor-pointer   font-bold border bg-primary-purple px-16 py-8 rounded-md text-white-white"
             onClick={handleReset}

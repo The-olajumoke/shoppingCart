@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React, { useEffect } from "react";
 import CartItem from "./CartItem";
 import { formatCurrency } from "../utils/FormatCurrency";
 
@@ -47,8 +46,8 @@ const ShoppingBag = ({
         </div>
       </div>
       {allCarts.length ? (
-        <div className="bg-white-white  p-15 flex flex-col rounded-lg shadow-md vp-600:shadow-none gap-10 ">
-          <h3 className=" font-semibold text-black-coal text-sm">
+        <div className="bg-white-white  p-15 flex flex-col rounded-lg shadow-md vp-600:shadow-none gap-7 ">
+          <h3 className=" font-medium text-black-coal text-sm">
             Billing Summary
           </h3>
 

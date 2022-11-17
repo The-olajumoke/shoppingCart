@@ -1,16 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import styles from "../styles/cart.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
-// import { AddProductToCart } from "@/context/actions/cart/addToCart";
-import { items } from "../cartItems/items";
 import { formatCurrency } from "../utils/FormatCurrency";
 function CartItem({ item, handleDelete, cartArray, allCarts, setAllCarts }) {
   const { productImage, productName, sellingPrice, id, quantityLeft } = item;
 
   const [quantity, setQuantity] = useState(item.quantity);
   const [total, setTotal] = useState(sellingPrice);
-  //   const [allCarts, setAllCarts] = useState([items]);
 
   useEffect(() => {
     setTotal(sellingPrice * quantity);
@@ -76,7 +73,9 @@ function CartItem({ item, handleDelete, cartArray, allCarts, setAllCarts }) {
             <h6 className=" text-gray-deadGray capitalize">{productName}</h6>
           </div>
           <div className="flex items-center  gap-5">
-            <h6 className="font-bold">{formatCurrency(sellingPrice)}/unit</h6>
+            <h6 className=" font-medium">
+              {formatCurrency(sellingPrice)}/unit
+            </h6>
             <div className="flex justify-center items-center">
               {" "}
               <Image
@@ -121,7 +120,7 @@ function CartItem({ item, handleDelete, cartArray, allCarts, setAllCarts }) {
           </div>
         </div>
 
-        <h6 className=" font-bold text-primary-limeGreen">
+        <h6 className="  font-medium text-primary-limeGreen">
           = {formatCurrency(total)}{" "}
         </h6>
       </div>
